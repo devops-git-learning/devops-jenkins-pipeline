@@ -15,6 +15,12 @@ pipeline {
 	    }
 
 	  }
+	stage('print username'){
+	   steps{
+	   	sh 'username'
+	   }
+
+	}
        }
 }
 
