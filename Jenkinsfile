@@ -12,7 +12,7 @@ pipeline {
                 withCredentials([string(credentialsId:'pdcokerhub', variable: 'mydockerhub')]) {
                 sh 'docker login -u pk1dockerhub -p ${mydockerhub}'
                 sh 'docker build -t my-pipeline-web:0.0.${BUILD_NUMBER} .'
-                sh 'docker tag my-pipeline-web:0.0.${BUILD_NUMBER} docker.io/pk1dockerhub/ my-pipeline-web:0.0.${BUILD_NUMBER}'
+                sh 'docker tag my-pipeline-web:0.0.${BUILD_NUMBER} docker.io/pk1dockerhub/my-pipeline-web:0.0.${BUILD_NUMBER}'
                 sh 'docker push docker.io/pk1dockerhub/ my-pipeline-web:0.0.${BUILD_NUMBER}'
                 }
               }               
