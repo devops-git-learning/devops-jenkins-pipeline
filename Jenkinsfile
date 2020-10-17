@@ -5,7 +5,8 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
-            }
+            	}
+	    }
 	stage('print env'){
 	    steps {
 	      sh 'env'
@@ -14,7 +15,6 @@ pipeline {
 	    }
 
 	  }
-        }
-    }
+       }
 }
 
